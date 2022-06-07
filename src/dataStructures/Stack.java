@@ -90,8 +90,8 @@ public class Stack {
             System.out.println("Your stack is empty");
         } else {
             for(int i = 0; i <= top; ++i) {
-                int var10001 = arr[i];
-                System.out.print("" + var10001 + ", ");
+                int value = arr[i];
+                System.out.print("" + value + ", ");
             }
         }
 
