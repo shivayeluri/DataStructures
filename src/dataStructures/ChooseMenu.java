@@ -1,6 +1,7 @@
 
 package dataStructures;
 
+import java.util.Queue;
 import java.util.Scanner;
 
 public class ChooseMenu {
@@ -26,12 +27,13 @@ public class ChooseMenu {
                         System.out.println("Ordered Linked List");
                         break;
                     case 3:
-                        System.out.println("Queue");
-                        break;
+                        System.out.println("Please enter Queue size :");
+                        int queueSize = input.nextInt();
+                        new Que(queueSize).operation();
                     case 4:
                         System.out.println("Please enter stack size :");
-                        int queueSize = input.nextInt();
-                        new Stack(queueSize).operations();
+                        int stackSize = input.nextInt();
+                        new Stack(stackSize).operations();
                 }
             } else {
                 System.out.println("\nPlease choose 1-4 only");
