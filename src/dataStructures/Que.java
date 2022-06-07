@@ -22,33 +22,35 @@ public class Que {
         System.out.println(" ");
         boolean counter = false;
 
-        while(!counter) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("select operation");
-            int option = sc.nextInt();
-            if (option > 0 && option < 5) {
-                switch (option) {
-                    case 1:
-                        Scanner sc1 = new Scanner(System.in);
-                        System.out.println("what you want to enqueue");
-                        int input = sc1.nextInt();
-                        enQueue(input);
-                        display();
-                        break;
-                    case 2:
-                        deQueue();
-                        break;
-                    case 3:
-                        display();
-                        break;
-                    case 4:
-                        display();
-                        counter = true;
-                        System.exit(-1);
+        try {
+            while (!counter) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("select operation");
+                int option = sc.nextInt();
+                if (option > 0 && option < 5) {
+                    switch (option) {
+                        case 1 -> {
+                            Scanner sc1 = new Scanner(System.in);
+                            System.out.println("what you want to enqueue");
+                            int input = sc1.nextInt();
+                            enQueue(input);
+                            display();
+                        }
+                        case 2 -> deQueue();
+                        case 3 -> display();
+                        case 4 -> {
+                            display();
+                            counter = true;
+                            System.exit(-1);
+                        }
+                    }
                 }
             }
+        }catch (Exception e){
+            System.out.println("If you are at operation selection Please choose between 1 - 4 only !");
+            System.out.println("If you are entering input values or index values, Please make sure that you have entered Integers only.");
+            operation();
         }
-
     }
 
     boolean isQueFull() {
