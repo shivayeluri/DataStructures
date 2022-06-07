@@ -2,7 +2,6 @@
 package dataStructures;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class ChooseMenu {
     public ChooseMenu() {
@@ -30,7 +29,9 @@ public class ChooseMenu {
                         System.out.println("Queue");
                         break;
                     case 4:
-                        System.out.println("Stack");
+                        System.out.println("Please enter stack size :");
+                        int queueSize = input.nextInt();
+                        new Stack(queueSize).operations();
                 }
             } else {
                 System.out.println("\nPlease choose 1-4 only");
