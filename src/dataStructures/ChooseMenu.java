@@ -17,17 +17,17 @@ public class ChooseMenu {
         sb.append("1. Linked List\n2. Ordered Linked List\n3. Queue\n4. Stack");
         System.out.println(sb);
         Scanner input = new Scanner(System.in);
-        int counter = 0;
 
         try {
             if (option > 0 && option < 6) {
-                int size;
                 switch (option) {
                     case 1 -> {
                         System.out.println("You have chose Linked list ");
                         new LinkedList().operations();
                     }
-                    case 2 -> System.out.println("Ordered Linked List");
+                    case 2 -> {
+                        System.out.println("Ordered Linked List");
+                    }
                     case 3 -> {
                         System.out.println("Please enter Queue size :");
                         int queueSize = input.nextInt();
@@ -40,7 +40,6 @@ public class ChooseMenu {
                     }
                     case 5 -> {
                         System.out.println("Good bye");
-                        counter = 5;
                     }
                 }
             } else {
