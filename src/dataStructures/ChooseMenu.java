@@ -20,11 +20,11 @@ public class ChooseMenu {
 
         try {
             if (option > 0 && option < 5) {
-                int size;
                 switch (option) {
                     case 1:
                         System.out.println("You have chose Linked list ");
                         new LinkedList().operations();
+                        break;
                     case 2:
                         System.out.println("Ordered Linked List");
                         break;
@@ -32,10 +32,12 @@ public class ChooseMenu {
                         System.out.println("Please enter Queue size :");
                         int queueSize = input.nextInt();
                         new Que(queueSize).operation();
+                        break;
                     case 4:
                         System.out.println("Please enter stack size :");
                         int stackSize = input.nextInt();
                         new Stack(stackSize).operations();
+                        break;
                 }
             } else {
                 System.out.println("\nPlease choose 1-4 only");
