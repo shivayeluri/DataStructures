@@ -1,6 +1,8 @@
 
 package dataStructures;
 
+import dataStructures.LinkedLis.LinkedList;
+
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -21,8 +23,8 @@ public class ChooseMenu {
                 int size;
                 switch (option) {
                     case 1:
-                        System.out.println("Linked-list");
-                        break;
+                        System.out.println("You have chose Linked list ");
+                        new LinkedList().operations();
                     case 2:
                         System.out.println("Ordered Linked List");
                         break;
