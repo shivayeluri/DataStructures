@@ -52,7 +52,9 @@ public class Stack {
                 }
             }
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println("If your selecting stack operations, Please chose between 1 - 6 only !");
+            System.out.println("If you entering input data or index value, Please make sure that you have entered numbers only !");
+            operations();
         }
     }
 
