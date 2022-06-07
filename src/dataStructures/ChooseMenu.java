@@ -36,9 +36,6 @@ public class ChooseMenu {
                         int stackSize = input.nextInt();
                         new Stack(stackSize).operations();
                     }
-                    case 5 -> {
-                        System.out.println("Good bye");
-                    }
                 }
             } else {
                 System.out.println("\nPlease choose 1-5 only");
