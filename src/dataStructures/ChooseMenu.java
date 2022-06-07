@@ -44,7 +44,7 @@ public class ChooseMenu {
                 System.out.println("\nPlease choose 1-5 only");
             }
         } catch (Exception e) {
-            System.out.println("Please enter integers only !");
+            System.out.println("Please enter size in numeric only !");
         }
 
     }
