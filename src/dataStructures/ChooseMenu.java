@@ -19,15 +19,13 @@ public class ChooseMenu {
         Scanner input = new Scanner(System.in);
 
         try {
-            if (option > 0 && option < 6) {
+            if (option > 0 && option < 5) {
                 switch (option) {
                     case 1 -> {
                         System.out.println("You have chose Linked list ");
                         new LinkedList().operations();
                     }
-                    case 2 -> {
-                        System.out.println("Ordered Linked List");
-                    }
+                    case 2 -> System.out.println("ordered linked list");
                     case 3 -> {
                         System.out.println("Please enter Queue size :");
                         int queueSize = input.nextInt();

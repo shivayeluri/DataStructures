@@ -23,7 +23,7 @@ public class Que {
         boolean counter = false;
 
         try {
-            while (!counter) {
+            while (counter) {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("select operation");
                 int option = sc.nextInt();
@@ -40,15 +40,15 @@ public class Que {
                         case 3 -> display();
                         case 4 -> {
                             display();
-                            counter = true;
+                            counter = false;
                             System.exit(-1);
                         }
                     }
                 }
             }
-        }catch (Exception e){
-            System.out.println("If you are at operation selection Please choose between 1 - 4 only !");
-            System.out.println("If you are entering input values or index values, Please make sure that you have entered Integers only.");
+        } catch (Exception e) {
+            System.out.println("If your selecting queue operations, Please chose between 1 - 4 only !");
+            System.out.println("If you entering input data or index value, Please make sure that you have entered numbers only !");
             operation();
         }
     }
@@ -101,7 +101,7 @@ public class Que {
             System.out.println("\nFront index-> " + front);
             System.out.println("Items -> ");
 
-            for(int i = front; i <= rear; ++i) {
+            for (int i = front; i <= rear; ++i) {
                 int value = items[i];
                 System.out.print("" + value + "  ");
             }
