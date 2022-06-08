@@ -7,6 +7,7 @@ public class LinkedList {
 
     public void operations(){
         Scanner sc = new Scanner(System.in);
+        System.out.println("\n Choose one operation: ");
         System.out.println("1. insert\n2. insertAtStart\n3. insertAt\n4. deleteAt\n5. print\n6. exit");
 
         try{
@@ -51,8 +52,10 @@ public class LinkedList {
                         case (4) -> {
                             System.out.println("What position you want to delete :");
                             int index = sc.nextInt();
-                            if(index > length) {
-                                System.out.println("Please enter index from 1 - "+length);
+                            if(length == 0) {
+                                System.out.println("EMPTY LINKED-LIST\n");
+                            }else if (index > length) {
+                                System.out.println("Please enter index from 0 - " + length);
                             }else{
                                 deleteAt(index);
                             }
@@ -72,7 +75,9 @@ public class LinkedList {
                 }
             }
         }catch (Exception e){
-            System.out.println(e);
+            System.out.println("If your selecting Linked-list operations, Please chose between 1 - 6 only !");
+            System.out.println("If you entering input data or index value, Please make sure that you have entered numbers only !");
+            operations();
         }
     }
 
