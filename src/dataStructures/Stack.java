@@ -1,15 +1,18 @@
 
 package dataStructures;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Stack {
-    private int[] arr;
+//    private int[] arr;
+    ArrayList<Integer> arr;
     private int top;
     private final int capacity;
 
     public Stack(int size) {
-        arr = new int[size];
+//        arr = new int[size];
+        arr = new ArrayList<>(size);
         capacity = size;
         top = -1;
     }
@@ -66,7 +69,7 @@ public class Stack {
         }
 
         System.out.println("Inserting " + x);
-        arr[++top] = x;
+        arr.add(++top, x);
         System.out.println("After inserting : ");
     }
 
@@ -75,8 +78,10 @@ public class Stack {
             System.out.println("STACK EMPTY");
             System.exit(1);
         }
+        System.out.println("Deleted :"+ arr.get(0));
+        arr.remove(0);
+        top--;
 
-        System.out.println("Deleted :"+arr[top--]);
     }
 
     public Boolean isEmpty() {
@@ -92,7 +97,7 @@ public class Stack {
             System.out.println("Your stack is empty");
         } else {
             for(int i = 0; i <= top; ++i) {
-                int value = arr[i];
+                int value = arr.get(i);
                 System.out.print("" + value + ", ");
             }
         }
