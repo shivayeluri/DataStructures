@@ -20,10 +20,10 @@ public class Que {
         System.out.println("Choose one operation");
         System.out.print("1. enqueue\n2. dequeue\n3. print\n4. quit");
         System.out.println(" ");
-        boolean counter = false;
+        int counter = 0;
 
         try {
-            while (counter) {
+            while (counter != 4) {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("select operation");
                 int option = sc.nextInt();
@@ -36,11 +36,14 @@ public class Que {
                             enQueue(input);
                             display();
                         }
-                        case 2 -> deQueue();
+                        case 2 -> {
+                            deQueue();
+                            display();
+                        }
                         case 3 -> display();
                         case 4 -> {
                             display();
-                            counter = false;
+                            counter = 4;
                             System.exit(-1);
                         }
                     }
@@ -81,12 +84,12 @@ public class Que {
         if (isQueEmpty()) {
             System.out.println("Queue is empty");
         } else {
-            int element = items[front];
+            int element = items[rear];
             if (front >= rear) {
                 front = -1;
                 rear = -1;
             } else {
-                ++front;
+                --rear;
             }
 
             System.out.println("" + element + " Deleted");
@@ -101,12 +104,13 @@ public class Que {
             System.out.println("\nFront index-> " + front);
             System.out.println("Items -> ");
 
-            for (int i = front; i <= rear; ++i) {
+            for (int i = rear; i >= front; --i) {
                 int value = items[i];
                 System.out.print("" + value + "  ");
+
             }
 
-            System.out.println("\nRear index-> " + this.rear);
+            System.out.println("\nRear index-> " + rear);
         }
 
     }
